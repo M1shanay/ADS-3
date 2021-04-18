@@ -58,7 +58,7 @@ int eval(std::string pst) {
                 stack.pop();
                 int a1 = stack.get();
                 stack.pop();
-                if (pst[i] == '-') 
+                if (pst[i] == '-')
                     stack.push(a1 - a2);
                  else if (pst[i] == '+')
                         stack.push(a1 + a2);
@@ -71,4 +71,3 @@ int eval(std::string pst) {
         }
     return stack.get();
     }
-}
