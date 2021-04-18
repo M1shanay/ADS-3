@@ -49,26 +49,26 @@ std::string infx2pstfx(std::string inf) {
 }
 
 int eval(std::string pst) {
-      TStack<int> stack;
+    TStack<int> stack;
     for (int i = 0; i < pst.length(); i++) {
         if (pst[i] <= '9' && pst[i] >= '0') {
-            stack.push(pst[i] - '0');
+            stack.push(pst[i]- '0');
         } else { if (pst[i] != ' ') {
                 int a2 = stack.get();
                 stack.pop();
                 int a1 = stack.get();
                 stack.pop();
-                if (pst[i] == '-')
-                   stack.push(a1 - a2);
-                else if (pst[i] == '+')
+                if (pst[i] == '-') 
+                    stack.push(a1 - a2);
+                 else if (pst[i] == '+')
                         stack.push(a1 + a2);
-                    else if (pst[i] == '*')
+                  else if (pst[i] == '*')
                         stack.push(a1 * a2);
                     else
                         stack.push(a1 / a2);
                 }
             }
         }
-        return stack.get();
+    return stack.get();
     }
 }
