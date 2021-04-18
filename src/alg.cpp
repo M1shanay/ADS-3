@@ -43,6 +43,7 @@ std::string infx2pstfx(std::string inf) {
     }
     while (!stack.isEmpty()) {
         strok += stack.get();
+        strok += ' ';
         stack.pop();
     }
     return strok;
