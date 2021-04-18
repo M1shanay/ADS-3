@@ -46,6 +46,7 @@ std::string infx2pstfx(std::string inf) {
         strok += ' ';
         stack.pop();
     }
+    strok.pop_back();
     return strok;
 }
 
