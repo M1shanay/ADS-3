@@ -52,7 +52,7 @@ int eval(std::string pst) {
       TStack<int> stack;
     for (int i = 0; i < pst.length(); i++) {
         if (pst[i] <= '9' && pst[i] >= '0') {
-            stack.push(pst[i]);
+            stack.push(pst[i] - '0');
         } else { if (pst[i] != ' ') {
                 int a2 = stack.get();
                 stack.pop();
